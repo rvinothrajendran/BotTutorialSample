@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30404.54
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdaptiveCard1", "AdaptiveCard1\AdaptiveCard1.csproj", "{E3F35AE4-AF51-4900-ADF3-BA36FFB853EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Part01AdaptiveCard", "AdaptiveCard1\Part01AdaptiveCard.csproj", "{E3F35AE4-AF51-4900-ADF3-BA36FFB853EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Part02LGTemplate", "Part02LGTemplate\Part02LGTemplate.csproj", "{5A1FCC5E-F017-4CD5-9E7E-081D8EEFC287}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{E3F35AE4-AF51-4900-ADF3-BA36FFB853EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3F35AE4-AF51-4900-ADF3-BA36FFB853EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3F35AE4-AF51-4900-ADF3-BA36FFB853EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A1FCC5E-F017-4CD5-9E7E-081D8EEFC287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A1FCC5E-F017-4CD5-9E7E-081D8EEFC287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A1FCC5E-F017-4CD5-9E7E-081D8EEFC287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A1FCC5E-F017-4CD5-9E7E-081D8EEFC287}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
