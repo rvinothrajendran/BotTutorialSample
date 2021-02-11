@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+	<IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove=".template.config\**" />
+    <Content Remove=".template.config\**" />
+    <EmbeddedResource Remove=".template.config\**" />
+    <None Remove=".template.config\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="nuget.exe" />
+    <None Remove="Vinoth.Template.NetCoreTool.nuspec" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Adaptive" Version="4.11.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Debugging" Version="4.11.1-preview" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Bot.Builder.Dialogs.Adaptive">
+      <HintPath>..\..\delete\botbuilder-dotnet-main\botbuilder-dotnet-main\libraries\Microsoft.Bot.Builder.Dialogs.Adaptive\bin\Debug\netstandard2.0\Microsoft.Bot.Builder.Dialogs.Adaptive.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bot.Builder.Dialogs.Declarative">
+      <HintPath>..\..\delete\botbuilder-dotnet-main\botbuilder-dotnet-main\libraries\Microsoft.Bot.Builder.Dialogs.Adaptive\bin\Debug\netstandard2.0\Microsoft.Bot.Builder.Dialogs.Declarative.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bot.Builder.LanguageGeneration">
+      <HintPath>..\..\delete\botbuilder-dotnet-main\botbuilder-dotnet-main\libraries\Microsoft.Bot.Builder.Dialogs.Adaptive\bin\Debug\netstandard2.0\Microsoft.Bot.Builder.LanguageGeneration.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+    <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
