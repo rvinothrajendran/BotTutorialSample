@@ -1,0 +1,7 @@
+[import](common.lg)
+
+
+# ConfirmInput_Prompt_FYflIs()
+[Activity
+    Text = ${dialog.display}
+]

@@ -1,0 +1,76 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "f4gFvR",
+    "name": "Confirmation",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "lJv9i8"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "Zwucds"
+          },
+          "condition": "= dialog.display == null",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "vUPFiP"
+              },
+              "property": "dialog.display",
+              "value": "Are you sure you want to process"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "FYflIs"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "property": "dialog.conform",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ],
+          "style": "heroCard",
+          "prompt": "${ConfirmInput_Prompt_FYflIs()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "eERqMt"
+          },
+          "value": "=dialog.conform"
+        }
+      ]
+    }
+  ],
+  "generator": "Confirmation.lg",
+  "recognizer": "Confirmation.lu.qna",
+  "id": "Confirmation"
+}

@@ -1,0 +1,62 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "lAlRlV",
+    "name": "TextInput",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "rnKTUa"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "FrbuWR"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "prompt": "${TextInput_Prompt_FrbuWR()}",
+          "property": "dialog.name",
+          "outputFormat": "=toUpper(this.value)"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "rV361T"
+          },
+          "activityProcessed": true,
+          "dialog": "Confirmation",
+          "options": {}
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "KcO6Tz"
+          },
+          "activity": "${SendActivity_KcO6Tz()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "eev4B0"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "TextInput.lg",
+  "recognizer": "TextInput.lu.qna",
+  "id": "TextInput"
+}

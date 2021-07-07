@@ -1,0 +1,88 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "ZQLy3Q",
+    "name": "NumberInput",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ujvEeR"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.NumberInput",
+          "$designer": {
+            "id": "ci0lYn"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${NumberInput_Prompt_ci0lYn()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "property": "dialog.mobile",
+          "validations": [
+            "length(string(this.value)) == 10"
+          ],
+          "defaultValue": 1234567890
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "aFp1WC"
+          },
+          "activityProcessed": true,
+          "dialog": "Confirmation",
+          "resultProperty": "dialog.conform",
+          "options": {
+            "display": "Are you sure your mobile : {  ${dialog.mobile} } is correct"
+          }
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "iUueOm"
+          },
+          "condition": "=dialog.conform == True",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "gghIUG"
+              },
+              "activity": "${SendActivity_gghIUG()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "ysrVzZ"
+              },
+              "activity": "${SendActivity_ysrVzZ()}"
+            },
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "2kEZii"
+              },
+              "activityProcessed": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "NumberInput.lg",
+  "recognizer": "NumberInput.lu.qna",
+  "id": "NumberInput"
+}

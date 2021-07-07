@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# NumberInput_Prompt_ci0lYn()
+[Activity
+    Text = Please enter the mobile number
+]
+
+# SendActivity_gghIUG()
+[Activity
+    Text = ${dialog.mobile}
+]
+
+# SendActivity_ysrVzZ()
+[Activity
+    Text = Okay
+]

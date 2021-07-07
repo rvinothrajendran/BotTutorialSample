@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_ExVVzH()
+[Activity
+    Text = Please select the input type
+]
+
+# SendActivity_O2Enx0()
+[Activity
+    Text = ${user.choice}
+]
+
+# SendActivity_90q8Wv()
+[Activity
+    Text = We are working on other input , will add soon
+]

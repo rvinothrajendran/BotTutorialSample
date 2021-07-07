@@ -1,0 +1,14 @@
+[import](common.lg)
+
+# TextInput_Prompt_FrbuWR_text()
+- Hey my name is Input Bot , Let me know your name
+- Please send your name
+# TextInput_Prompt_FrbuWR()
+[Activity
+    Text = ${TextInput_Prompt_FrbuWR_text()}
+]
+
+# SendActivity_KcO6Tz()
+[Activity
+    Text = ${dialog.name}
+]

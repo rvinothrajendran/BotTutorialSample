@@ -1,0 +1,114 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "c7zVlw",
+    "name": "SwitchDialog",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "32wy1S"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "ExVVzH"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${ChoiceInput_Prompt_ExVVzH()}",
+          "choiceOptions": {
+            "includeNumbers": false
+          },
+          "choices": [
+            "Text",
+            "Number"
+          ],
+          "style": "heroCard",
+          "property": "user.choice"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "O2Enx0"
+          },
+          "activity": "${SendActivity_O2Enx0()}"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "ifWM9A"
+          },
+          "condition": "=user.choice",
+          "cases": [
+            {
+              "value": "Text",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "ed3gSy"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "TextInput"
+                }
+              ]
+            },
+            {
+              "value": "Number",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "aMTSEm"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "NumberInput"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "90q8Wv"
+              },
+              "activity": "${SendActivity_90q8Wv()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.DeleteProperty",
+          "$designer": {
+            "id": "ai3mu6"
+          },
+          "property": "user.choice"
+        },
+        {
+          "$kind": "Microsoft.RepeatDialog",
+          "$designer": {
+            "id": "7EIwxm"
+          },
+          "activityProcessed": true
+        }
+      ]
+    }
+  ],
+  "generator": "SwitchDialog.lg",
+  "recognizer": "SwitchDialog.lu.qna",
+  "id": "SwitchDialog"
+}

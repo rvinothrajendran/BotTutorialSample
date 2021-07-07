@@ -1,0 +1,28 @@
+[import](common.lg)
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# SendActivity_859266()
+[Activity
+    Text = Hello Alexa, I'm Bot Composer Version 2.0
+]
+
+# SendActivity_sbtfpB()
+[Activity
+    Text = welcome message
+]
+
+# SendActivity_KE4Pwf()
+[Activity
+    Text = welcome ${turn.activity.text}
+]
+
+# SendActivity_hm5SKv()
+[Activity
+    Text = Hey Alexa hoe are you
+]
