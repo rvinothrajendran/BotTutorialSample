@@ -1,0 +1,79 @@
+[import](common.lg)
+
+# TextInput_Prompt_LsPvQF()
+[Activity
+    Text = Please enter the city name
+]
+
+# SendActivity_m5BEGK()
+[Activity
+    Text = ${turn.results}
+]
+
+# SendActivity_9L7ozH()
+[Activity
+    Attachments = ${json(SendActivity_9L7ozH_attachment_YJ0WhV())}
+]
+
+# SendActivity_9L7ozH_attachment_YJ0WhV()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "${turn.results.content.location.name} ,${turn.results.content.location.region},${turn.results.content.location.country}",
+            "size": "Large",
+            "isSubtle": true,
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "${turn.results.content.current.last_updated}",
+            "spacing": "None",
+            "wrap": true
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${turn.results.content.current.condition.icon}",
+                            "size": "Small"
+                        },
+                         {
+                            "type": "TextBlock",
+                            "text": "${turn.results.content.current.condition.text}",
+                            "size": "ExtraLarge",
+                            "spacing": "None",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "auto",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${turn.results.content.current.temp_c}",
+                            "size": "ExtraLarge",
+                            "spacing": "None",
+                            "wrap": true
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}
+```

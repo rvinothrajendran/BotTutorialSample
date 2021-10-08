@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_ExternalHttpRequest",
+  "recognizers": {
+    "en-us": "ExternalHttpRequest.en-us.lu",
+    "": "ExternalHttpRequest.en-us.lu"
+  }
+}
