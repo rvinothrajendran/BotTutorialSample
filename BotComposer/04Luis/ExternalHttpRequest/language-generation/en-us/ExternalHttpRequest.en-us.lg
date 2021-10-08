@@ -1,0 +1,40 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_Zlok72()
+[Activity
+    Text = ${turn.results}
+]
+
+# SendActivity_yl7z5b()
+[Activity
+    Attachments = ${json(SendActivity_yl7z5b_attachment_zn1uaf())}
+]
+
+# SendActivity_yl7z5b_attachment_zn1uaf()
+[HeroCard
+  title = "HTTP Request"
+  images = ${turn.results.content.message}
+]
+
+# SendActivity_kICYTU()
+[Activity
+    Text = ${SendActivity_kICYTU_text()}
+]
+
+# SendActivity_kICYTU_text()
+- ${ #Weather.Score }
+# SendActivity_gNZptC()
+[Activity
+    Text = ${SendActivity_gNZptC_text()}
+]
+
+# SendActivity_gNZptC_text()
+- ${dialog.place}
