@@ -1,0 +1,157 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "name": "ExternalHttpRequest",
+    "description": "",
+    "id": "A79tBe"
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item"
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "641773",
+                "name": "Branch: if/else"
+              },
+              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "859266",
+                    "name": "Send a response"
+                  },
+                  "activity": "${SendActivity_Greeting()}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "mb2n1u"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "8t82EC"
+          },
+          "resultProperty": "turn.results",
+          "method": "GET",
+          "headers": {},
+          "url": "https://dog.ceo/api/breeds/image/random"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "YMwAXc"
+          },
+          "condition": "turn.results.statusCode == 200",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "yl7z5b"
+              },
+              "activity": "${SendActivity_yl7z5b()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Zlok72"
+          },
+          "activity": "${SendActivity_Zlok72()}",
+          "disabled": true
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "Q8DKcl",
+        "name": "weather"
+      },
+      "intent": "weather",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "kICYTU"
+          },
+          "activity": "${SendActivity_kICYTU()}",
+          "disabled": true
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "uvSU5N"
+          },
+          "property": "dialog.place",
+          "value": "=coalesce(@place,@location)"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "gNZptC"
+          },
+          "activity": "${SendActivity_gNZptC()}",
+          "disabled": true
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "INUBiT"
+          },
+          "activityProcessed": true,
+          "dialog": "GetWeather",
+          "options": {
+            "location": "${dialog.place}"
+          }
+        }
+      ],
+      "condition": "= #Weather.Score >= 0.8"
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "ILzSwU",
+        "name": "Help"
+      },
+      "intent": "Help",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "8OrPDw"
+          },
+          "activityProcessed": true,
+          "dialog": "InfoDialog"
+        }
+      ]
+    }
+  ],
+  "generator": "ExternalHttpRequest.lg",
+  "id": "ExternalHttpRequest",
+  "recognizer": "ExternalHttpRequest.lu.qna"
+}

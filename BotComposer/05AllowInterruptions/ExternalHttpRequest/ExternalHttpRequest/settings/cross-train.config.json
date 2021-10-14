@@ -1,0 +1,13 @@
+{
+  "ExternalHttpRequest.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "weather": [
+        "GetWeather.en-us"
+      ],
+      "Help": [
+        "InfoDialog.en-us"
+      ]
+    }
+  }
+}
