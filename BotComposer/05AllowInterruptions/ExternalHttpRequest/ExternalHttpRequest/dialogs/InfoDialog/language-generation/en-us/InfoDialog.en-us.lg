@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# SendActivity_4oqGED()
+[Activity
+    Text = ${SendActivity_4oqGED_text()}
+]
+
+# SendActivity_4oqGED_text()
+- Example of City Name like Chennai , Bangalore 
+# ConfirmInput_Prompt_aKwnw8()
+[Activity
+    Text = ${ConfirmInput_Prompt_aKwnw8_text()}
+]
+
+# ConfirmInput_Prompt_aKwnw8_text()
+- Do you want contiune the chat
+# SendActivity_HwKZQS()
+[Activity
+    Text = ${SendActivity_HwKZQS_text()}
+]
+
+# SendActivity_HwKZQS_text()
+- Thank you 
