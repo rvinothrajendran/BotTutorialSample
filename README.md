@@ -1,8 +1,8 @@
 # BotTutorialSample
 
-This repository contains samples of my bot tutorial
+### This repository contains samples of my bot tutorial
 
-C#
-Python
+- C#
+- Python
 
--Vinoth.
+-Vinoth. [Youtube](www.youtube.com/vinothrajendran)
