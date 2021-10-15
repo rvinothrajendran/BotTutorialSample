@@ -1,0 +1,38 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# SendActivity_LRR0gS()
+[Activity
+    Text = ${SendActivity_LRR0gS_text()}
+]
+
+# SendActivity_LRR0gS_text()
+- ${user.result}
+# NumberInput_Prompt_wrRLJP()
+[Activity
+    Text = ${NumberInput_Prompt_wrRLJP_text()}
+]
+
+# NumberInput_Prompt_wrRLJP_text()
+- Please enter num 1
+# NumberInput_Prompt_drW4Gk()
+[Activity
+    Text = ${NumberInput_Prompt_drW4Gk_text()}
+]
+
+# NumberInput_Prompt_drW4Gk_text()
+- Please enter num 2
