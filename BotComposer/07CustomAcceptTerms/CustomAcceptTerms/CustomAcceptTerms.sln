@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31717.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomAcceptTerms", "CustomAcceptTerms\CustomAcceptTerms.csproj", "{D9ECEAC5-D18E-4573-836C-B4F140826380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcceptTerms", "AcceptTerms\AcceptTerms.csproj", "{161CA5BC-B978-44C5-AC24-D3C973B132CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9ECEAC5-D18E-4573-836C-B4F140826380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9ECEAC5-D18E-4573-836C-B4F140826380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9ECEAC5-D18E-4573-836C-B4F140826380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9ECEAC5-D18E-4573-836C-B4F140826380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{161CA5BC-B978-44C5-AC24-D3C973B132CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{161CA5BC-B978-44C5-AC24-D3C973B132CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{161CA5BC-B978-44C5-AC24-D3C973B132CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{161CA5BC-B978-44C5-AC24-D3C973B132CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D7B559F-57D1-4D9F-99F5-F9E22190CABF}
+	EndGlobalSection
+EndGlobal
