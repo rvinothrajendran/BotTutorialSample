@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.4.2.1</Version>
+    <PackageTags>msbot-component;msbot-action;msbot-middleware;</PackageTags>    
+  </PropertyGroup>
+  
+  <ItemGroup>
+  <Content Include="Schema/AcceptTerms.schema" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards" Version="2.7.2" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime" Version="4.14.1" />
+  </ItemGroup>
+
+</Project>
