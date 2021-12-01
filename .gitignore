@@ -41,3 +41,4 @@ rcf/
 *.vsp
 *.vspx
 *.obj
+__pycache__/
