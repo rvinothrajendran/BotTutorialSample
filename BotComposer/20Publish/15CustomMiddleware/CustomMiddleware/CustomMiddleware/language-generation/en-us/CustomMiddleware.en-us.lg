@@ -1,0 +1,17 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_suRFU1()
+[Activity
+    Text = ${SendActivity_suRFU1_text()}
+]
+
+# SendActivity_suRFU1_text()
+- ${turn.activity.text}

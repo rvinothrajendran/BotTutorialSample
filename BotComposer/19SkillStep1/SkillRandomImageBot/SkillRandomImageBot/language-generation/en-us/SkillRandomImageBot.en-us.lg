@@ -1,0 +1,27 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# SendActivity_J15mrj()
+[Activity
+    Attachments = ${SendActivity_J15mrj_attachment_28l2uT()}
+]
+
+# SendActivity_J15mrj_attachment_28l2uT()
+[HeroCard
+  title = "Random image using skills bot"
+  images = ${turn.results.content.message}
+]
