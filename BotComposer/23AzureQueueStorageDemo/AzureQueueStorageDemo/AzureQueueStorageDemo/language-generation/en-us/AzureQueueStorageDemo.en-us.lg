@@ -1,0 +1,17 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_BQHEtl()
+[Activity
+    Text = ${SendActivity_BQHEtl_text()}
+]
+
+# SendActivity_BQHEtl_text()
+- ${dialog.result}

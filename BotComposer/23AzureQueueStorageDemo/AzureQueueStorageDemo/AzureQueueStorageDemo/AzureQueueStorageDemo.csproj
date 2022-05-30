@@ -1,0 +1,20 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    <UserSecretsId>145f0093-2e11-4c45-ae45-2e6c29dea244</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="**/*.blu;**/*.dialog;**/*.lg;**/*.lu;**/*.model;**/*.onnx;**/*.qna;**/*.txt" Exclude="$(BaseOutputPath)/**;$(BaseIntermediateOutputPath)/**;wwwroot/**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Bot.Builder.Community.Components.AzureQueueStorage" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.16.0" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.QnA" Version="4.16.0" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime" Version="4.16.0" />
+  </ItemGroup>
+</Project>
