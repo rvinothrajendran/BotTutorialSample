@@ -59,7 +59,7 @@
           "$designer": {
             "id": "B4hBpR"
           },
-          "ConnectionString": "DefaultEndpointsProtocol=https;AccountName=composerdemostore;AccountKey=sN75wRKjIdu0TzGnLyuPIpr/ptg2nduudowKn+/B0hz7sti96TjYDy+2afuvq16+/HHIPY15xZcE+AStP5YXIQ==;EndpointSuffix=core.windows.net",
+          "ConnectionString": "",
           "QueueName": "composerdemo",
           "resultProperty": "dialog.result"
         },
