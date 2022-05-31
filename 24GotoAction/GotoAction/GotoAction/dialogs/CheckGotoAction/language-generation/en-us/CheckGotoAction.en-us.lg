@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# ConfirmInput_Prompt_s6jmz3()
+[Activity
+    Text = ${ConfirmInput_Prompt_s6jmz3_text()}
+]
+
+# ConfirmInput_Prompt_s6jmz3_text()
+- Do you want see the 'Go to action' demo
