@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_UlDp8G()
+[Activity
+    Text = ${ChoiceInput_Prompt_UlDp8G_text()}
+]
+
+# ChoiceInput_Prompt_UlDp8G_text()
+- Sure , What do you like to order
+# SendActivity_KKvTIx()
+[Activity
+    Text = ${SendActivity_KKvTIx_text()}
+]
+
+# SendActivity_KKvTIx_text()
+- ${dialog.user.ordertype}
