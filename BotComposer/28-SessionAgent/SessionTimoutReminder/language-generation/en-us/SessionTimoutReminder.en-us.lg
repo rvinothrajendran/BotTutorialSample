@@ -1,0 +1,31 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# SendActivity_FkTzQW()
+[Activity
+    Text = ${SendActivity_FkTzQW_text()}
+]
+
+# SendActivity_FkTzQW_text()
+- Are you there ? 
+# SendActivity_L4BVBM()
+[Activity
+    Text = ${SendActivity_L4BVBM_text()}
+]
+
+# SendActivity_L4BVBM_text()
+- Sorry, Timeout
