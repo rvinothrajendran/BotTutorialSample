@@ -1,0 +1,46 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# TextInput_Prompt_vdepQG()
+[Activity
+    Text = ${TextInput_Prompt_vdepQG_text()}
+]
+
+# TextInput_Prompt_vdepQG_text()
+- ```Hello, I can understand more than 25 languages, let me know which language are you interested to chat with me.
+```
+# SendActivity_kFvotG()
+[Activity
+    Text = ${SendActivity_kFvotG_text()}
+]
+
+# SendActivity_kFvotG_text()
+- ${turn.Multilingual}
+# TextInput_Prompt_7tw6LS()
+[Activity
+    Text = ${TextInput_Prompt_7tw6LS_text()}
+]
+
+# TextInput_Prompt_7tw6LS_text()
+- Please enter your name
+# SendActivity_ddbN76()
+[Activity
+    Text = ${SendActivity_ddbN76_text()}
+]
+
+# SendActivity_ddbN76_text()
+- Hello :  ${user.name}
