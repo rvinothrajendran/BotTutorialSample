@@ -1,0 +1,43 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome to your bot.
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# AttachmentInput_Prompt_NqMp5n()
+[Activity
+    Text = ${AttachmentInput_Prompt_NqMp5n_text()}
+]
+
+# AttachmentInput_Prompt_NqMp5n_text()
+- Please upload the file
+# SendActivity_zXc4g0()
+[Activity
+    Text = ${SendActivity_zXc4g0_text()}
+]
+
+# SendActivity_zXc4g0_text()
+- ${user.info}
+# SendActivity_jV5vTJ()
+[Activity
+    Attachments = ${SendActivity_jV5vTJ_attachment_oXjQAL()}
+]
+
+# SendActivity_jV5vTJ_attachment_oXjQAL()
+[HeroCard
+  title = ${user.result}
+  subtitle = "Form"
+  images = ${user.info.contentUrl}
+  
+]

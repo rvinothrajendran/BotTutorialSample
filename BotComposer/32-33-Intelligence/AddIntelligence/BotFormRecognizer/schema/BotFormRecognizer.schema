@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.botframework.com/schemas/component/v1.0/component.schema",
+  "$role": "implements(Microsoft.IDialog)",
+  "title": "ExtractFormRecognizer",
+  "description": "Extract Form data",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "resultProperty": {
+      "$ref": "schema:#/definitions/stringExpression",
+      "title": "Result",
+      "description": "Value from callers memory to store the result"
+    },
+    "FileUrl": {
+      "$ref": "schema:#/definitions/stringExpression",
+      "title": "File Url",
+      "description": "Value from callers memory to store the result"
+    },
+    "FileName": {
+      "$ref": "schema:#/definitions/stringExpression",
+      "title": "File Name",
+      "description": "Value from callers memory to store the result"
+    }
+  }
+}
